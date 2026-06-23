@@ -1,0 +1,11 @@
+
+
+Q1. What is dependency injection in FastAPI?
+->>>
+Simple version (easy speaking):>>
+
+FastAPI मध्ये Depends() वापरून आपण database session, auth सारख्या गोष्टी automatically inject करतो, त्यामुळे code reusable आणि clean राहतो.
+
+My ans:>>
+
+In FastAPI, dependency injection is provided via Depends(). It automatically injects dependencies like database sessions and authentication. It helps make the code reusable and clean.

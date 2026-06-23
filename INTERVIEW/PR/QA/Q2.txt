@@ -1,0 +1,7 @@
+
+
+Q2. Why is FastAPI faster than Flask?
+
+-->>
+
+FastAPI is faster than Flask because it uses async support, Starlette ASGI, and optimized Pydantic validation with type hints.
