@@ -1,0 +1,194 @@
+Q1. What is Python?
+-->
+Python is a high level, interpreted, object orinted programing lang.
+Its mostly used in web development , AI ,machine learning, Automation , API developement ect.
+
+
+Q2. Difference between list and tuple?
+>>
+list is mutable & tuple is immutable
+create list using [] and tuple ()
+we can update the the list in same list
+but tuple is not update and modify its we create copy using assign operator
+
+ex:
+
+mylist=[1,2,3,4]
+
+mylist.append(5)
+
+
+
+mytuple=(1,2,3,4)
+
+new_tuple=mytuple+(4,)
+
+
+Q3. Difference between == and is?
+>>
+== checks whether two objects have the same value, whereas is checks whether both variables refer to the same object in memory.
+
+ex:  
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a == b)  # True (same values)
+print(a is b)  # False (different objects)
+
+print(a is c)  # True (same object)
+
+Q4. Explain dictionary in Python.
+>> 
+✔️ Dictionary is mutable.
+✔️ Stores data in key:value pairs.
+✔️ Can be modified.
+✔️ Keys are unique.
+✔️ Created using curly braces {}.
+✔️ Correct example.
+✔️ ex:
+    dict={
+        "name":"krushna",
+        "age":22
+    }
+
+Q4. count of frequency code
+
+list=[1,2,3,4,1,2,4,4]
+freq={}
+for num in list:
+    
+   if num in freq:
+       freq[num]+=1
+
+    else:
+       freq[num]=1
+
+print(freq)
+
+
+
+Q6. What is class and object?
+>>
+CLASS  >>
+   class is blueprint of object
+
+Object>>
+   Object is a instance of a class
+    ex:
+    
+    class CAR:
+        
+        def __init__(self,name="krushna"):
+            self.name=name   
+    
+    c1=CAR("Krushna")
+    print(c1.name)
+
+Q7. Why use self?
+>>  self is use to represent the current object
+
+ex:
+ 
+class A:
+
+   def __init__(self,name):
+
+      self.name=name
+
+a1=A("aman")
+
+print(a1.name)
+
+Q8. What is constructor?
+>> constructor is call automatically when object is created.
+
+ex:
+class A:
+
+   def __init__(self,name):
+
+      self.name=name
+
+a1=A("aman")
+
+print(a1.name)
+
+
+Q9. What is FastAPI?
+>> FastAPI is high-performance web framework of Python
+It is used for api creation
+It is works fast using async support
+Its swagger UI makes it proffessional
+
+using library fastapi we create app
+ex:
+from fastapi import FastAPI
+
+app=FastAPI()
+
+
+Q10. Difference between GET and POST?
+>> GET 
+     - GET method used fetch data
+     - @app.get("/fetch")
+>> POST 
+     - POST method used to add or send data backend 
+     - It is send data hidden or private
+     - @app.post("/create")
+
+Q11. What is Pydantic Schema?
+>>  pydantic library is used to valiadte data
+
+ex:
+
+from pydantic import BaseModel
+
+class Student(BaseModel):
+      
+      id:int
+      name:str
+      age:int
+
+Q12. SQLAlchemy Base meaning?
+>> SQLAlchemy is a object relation Mapper
+Base is create from declarative_base
+It is used to create model for table structure
+
+ex:
+from sqlalchemy.orm import declarative_base
+
+Base=declarative_base()
+
+Q13. Why we use session?
+>> session is used to interact with database with the help of queries
+It is import from sqlalchemy.orm
+It is bind database with project
+
+SessionLocal = sessionmaker(bind=engine)
+
+
+Q14. Find non repeating number:
+>>
+
+nums=[1,2,3,4,1,2,4,4]
+freq={}
+for num in nums:
+    
+   if num in freq:
+       freq[num]+=1
+
+    else:
+       freq[num]=1
+
+for num in nums:
+    if freq[num]==1:
+       print(num)
+       
+
+Q15. Difference between db.commit() and db.refresh() in SQLAlchemy? 😎
+>>
+commit:
+  commit() saves (permanently stores) all changes made in the current transaction to the database.
+refresh:
+  refresh() reloads the object from the database to get the latest updated data.
